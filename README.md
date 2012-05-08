@@ -8,6 +8,8 @@ Original code available for download from here: http://stuconnolly.com/downloads
 License
 ========
 
+Copyright (c) 2011 Stuart Connolly. All rights reserved.
+
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without
