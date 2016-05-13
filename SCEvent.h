@@ -35,7 +35,6 @@
 #import <CoreServices/CoreServices.h>
 #endif
 
-
 #import "SCConstants.h"
 
 /**
@@ -46,32 +45,26 @@
  * Class representing a single file system event.
  */
 @interface SCEvent : NSObject 
-{
-    NSUInteger _eventId;
-    NSDate *_eventDate;
-    NSString *_eventPath;
-    SCEventFlags _eventFlags;
-}
 
 /**
- * @property _eventId The ID of the event.
+ * @property eventId The ID of the event.
  */
-@property (readwrite, assign, getter=eventId, setter=setEventId:) NSUInteger _eventId;
+@property (assign) NSUInteger eventId;
 
 /**
- * @property _eventDate The date of the event.
+ * @property eventDate The date of the event.
  */
-@property (readwrite, retain, getter=eventDate, setter=setEventDate:) NSDate *_eventDate;
+@property (strong) NSDate *eventDate;
 
 /**
- * @property _eventPath The file system path of the event.
+ * @property eventPath The file system path of the event.
  */
-@property (readwrite, retain, getter=eventPath, setter=setEventPath:) NSString *_eventPath;
+@property (copy) NSString *eventPath;
 
 /**
- * @property _eventFlag The flags that are associated with the event.
+ * @property eventFlag The flags that are associated with the event.
  */
-@property (readwrite, assign, getter=eventFlags, setter=setEventFlags:) SCEventFlags _eventFlags;
+@property (assign) SCEventFlags eventFlags;
 
 + (SCEvent *)eventWithEventId:(NSUInteger)identifier 
 					eventDate:(NSDate *)date 

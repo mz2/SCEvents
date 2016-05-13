@@ -32,11 +32,6 @@
 
 @implementation SCEvent
 
-@synthesize _eventId;
-@synthesize _eventDate;
-@synthesize _eventPath;
-@synthesize _eventFlags;
-
 #pragma mark -
 #pragma mark Initialisation
 
@@ -100,13 +95,6 @@
 			((unsigned long)_eventId), 
 			[self eventPath], 
 			((unsigned long)_eventFlags)];
-}
-
-#pragma mark -
-
-- (void)dealloc
-{
-    _eventDate = nil;
 }
 
 @end
