@@ -242,8 +242,6 @@ static CFStringRef _strip_trailing_slash(CFStringRef string);
 	// Stop the event stream if it's still running
 	if (_isWatchingPaths) [self stopWatchingPaths];
     
-    dispatch_release(_eventsQueue);
-    
 	_lastEvent = nil;
     _watchedPaths = nil;
     _excludedPaths = nil;

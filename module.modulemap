@@ -1,0 +1,6 @@
+framework module SCEvents {
+    umbrella header "SCEventsFramework.h"
+
+    export *
+    module * { export * }
+}
